@@ -1,0 +1,22 @@
+/* Nooit doen : */
+
+:root {
+  --global-theme-color-base: hsl(5, 100%, 100%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+html {
+  background-color: var(--global-theme-color-base);
+}
+
+canvas {
+}
