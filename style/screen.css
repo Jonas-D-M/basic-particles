@@ -1,7 +1,7 @@
 /* Nooit doen : */
 
 :root {
-  --global-theme-color-base: hsl(5, 100%, 100%);
+  --global-theme-color-base: hsl(216, 100%, 97%);
 }
 
 html,
@@ -16,7 +16,9 @@ body {
 
 html {
   background-color: var(--global-theme-color-base);
+  cursor: crosshair;
 }
 
 canvas {
+  /* background-color: darkblue; */
 }

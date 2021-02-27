@@ -3,16 +3,17 @@ const draw = (function () {
   let ctx = null;
 
   const matchCanvasToWindow = (canvasElement) => {
-    canvasElement.width = window.innerWidth;
-    canvasElement.height = window.innerHeight;
+    canvasElement.width = document.documentElement.clientWidth;
+    canvasElement.height = document.documentElement.clientHeight;
   };
 
   const setup = (canvasElement) => {
-    window.addEventListener('resize', function () {
+    window.addEventListener("resize", function () {
       matchCanvasToWindow(canvasElement);
     });
     matchCanvasToWindow(canvasElement);
-    ctx = canvasElement.getContext('2d');
+    ctx = canvasElement.getContext("2d");
+    return ctx;
   };
 
   const circle = (x, y, { size, color }) => {
@@ -24,7 +25,7 @@ const draw = (function () {
   };
 
   const clearArea = () => {
-    ctx.clear();
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   };
 
   return { setup, circle, clearArea };
